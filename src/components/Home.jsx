@@ -16,7 +16,7 @@ class Home extends Component {
     fetchProducts = async()=>{
         try {
             console.log(process.env.REACT_APP_BACKEND_URL);
-            const url = process.env.RREACT_APP_BACKEND_URL
+            const url = process.env.REACT_APP_BACKEND_URL
             const response = await fetch(`https://amazon-products.herokuapp.com/products`)
             const data = await response.json()
             if(response.ok){
