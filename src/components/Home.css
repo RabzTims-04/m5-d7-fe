@@ -1,0 +1,9 @@
+.card{
+    height: 70%;
+    max-width: 70%;
+    background-color: transparent;
+}
+
+.card-img{
+    height: 40%;
+}
