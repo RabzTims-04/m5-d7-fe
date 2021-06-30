@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Card, Tabs, Tab, Form, Button, Row, Col, ListGroup } from 'react-bootstrap'
+import { Container, Card, Form, Button, Row, Col, ListGroup } from 'react-bootstrap'
 
 class Details extends Component {
 
@@ -228,13 +228,12 @@ class Details extends Component {
                   </Link> 
               </div>
               <div>
-                <Link>
+                
                     <Button
                       onClick={(e)=>this.deleteProduct(e)} 
                       variant="danger">
                         Delete
-                      </Button>
-                  </Link>
+                      </Button>              
                    
               </div>
             </div> 
@@ -394,7 +393,7 @@ class Details extends Component {
               </Card>
               
               )
-              :<p>Be first to review</p>}                  
+              :<span>Be first to review</span>}                  
                            
                 </div>
             </Container>
