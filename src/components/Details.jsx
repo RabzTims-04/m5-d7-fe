@@ -38,7 +38,7 @@ class Details extends Component {
     }
 
     if(this.state.homePage){
-      window.location.replace('http://localhost:3000')
+      window.location.replace('https://m5-d7-fe-git-main-rabztims-04.vercel.app/')
     }
 
   }
