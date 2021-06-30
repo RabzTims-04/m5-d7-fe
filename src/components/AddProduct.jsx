@@ -21,7 +21,7 @@ class AddProduct extends Component {
         let formData = new FormData()
         formData.append('image', this.state.postProduct.image)
        try {
-           const url = `https://amazon-products.herokuapp.com/products`
+           const url = `${process.env.REACT_APP_BACKEND_URL}/products`
            const response = await fetch(url,{
                method:'POST',
                body:JSON.stringify({
@@ -41,7 +41,7 @@ class AddProduct extends Component {
            if(response.ok){
                if(this.state.postProduct.image){
                    try {
-                       const postImg = await fetch(`https://amazon-products.herokuapp.com/products/${productId}/upload`,{
+                       const postImg = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/${productId}/upload`,{
                            method:'POST',
                            body: formData
                        })
@@ -66,7 +66,7 @@ class AddProduct extends Component {
                     "price":""
                 }
                })
-               window.location.replace('http://localhost:3000')
+               window.location.replace(`https://m5-d7-fe-git-main-rabztims-04.vercel.app`)
            }
        } catch (error) {
            console.log(error);

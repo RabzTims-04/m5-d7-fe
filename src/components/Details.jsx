@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Card, Form, Button, Row, Col, ListGroup } from 'react-bootstrap'
 
+const {REACT_APP_BACKEND_URL} = process.env
+
 class Details extends Component {
 
   state={
@@ -42,7 +44,7 @@ class Details extends Component {
   }
 
   id = this.props.match.params.id
-  url = `https://amazon-products.herokuapp.com/products/${this.id}`
+  url = `${REACT_APP_BACKEND_URL}/products/${this.id}`
 
   fetchProduct = async ()=>{   
     console.log(this.props.match.params.id);

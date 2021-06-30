@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import './Home.css'
 import { Link } from 'react-router-dom'
 
+const {REACT_APP_BACKEND_URL} = process.env
 class Home extends Component {
 
     state={
@@ -17,7 +18,7 @@ class Home extends Component {
         try {
             /* console.log(process.env.REACT_APP_BACKEND_URL); */
             /* const url = process.env.REACT_APP_BACKEND_URL */
-            const response = await fetch(`https://amazon-products.herokuapp.com/products`)
+            const response = await fetch(`${REACT_APP_BACKEND_URL}/products`)
             const data = await response.json()
             if(response.ok){
                 this.setState({
